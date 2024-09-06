@@ -39,7 +39,8 @@ function toggleActivePerson(id: string) {
                     @click="toggleActivePerson(person.id)"
                     :key="person.id"
                     :person="person"
-                    :activeId="activePerson"
+                    v-memo="[activePerson === person.id]"
+                    :is-active="activePerson === person.id"
                 />
             </tbody>
         </table>

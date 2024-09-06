@@ -9,11 +9,12 @@ interface Props {
         color: string
         image: string
     }
-    activeId: string
+    isActive: boolean
 }
 const props = defineProps<Props>()
 
 function consoleReRender() {
+    // eslint-disable-next-line no-console
     console.log('PeopleTableRow re-rendered:' + props.person.name)
 }
 </script>
@@ -21,7 +22,7 @@ function consoleReRender() {
     <tr
         class="cursor-pointer"
         :class="{
-            'bg-primary text-white': activeId === props.person.id,
+            'bg-primary text-white': isActive,
         }"
     >
         <td>
