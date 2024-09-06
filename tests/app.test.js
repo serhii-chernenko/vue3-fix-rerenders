@@ -12,6 +12,7 @@ beforeEach(() => {
 
 describe('The challenge', () => {
     it('sanity check', () => {
+        // eslint-disable-next-line no-console
         console.log(app)
         expect(true).toBe(true)
     })
